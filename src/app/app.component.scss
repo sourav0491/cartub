@@ -1,0 +1,45 @@
+$active-orange:#F44336;
+
+img{
+&.w-100 {
+    max-height: 100vh !important;
+    max-width:100% !important;
+  }
+}
+
+nav{
+    position:absolute;
+    right:264px;
+    top:100px;
+    z-index:9999;
+    li {
+        margin-left: 8px;
+        margin-right: 8px;
+    
+        &.active{
+            background: $active-orange !important;
+        }
+        &:hover{
+            background: $active-orange;
+        }
+        &>a{
+        color:white;
+        text-transform: uppercase;
+        margin: 4px;
+        padding: 10px;
+        font-size: 21px;
+        
+    }
+        
+    }
+}
+
+.carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    &.active{
+        background-color: $active-orange;
+    }
+  }
+
