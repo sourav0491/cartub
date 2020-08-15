@@ -9,9 +9,9 @@ img{
 
 nav{
     position:absolute;
-    right:264px;
-    top:100px;
-    z-index:9999;
+    right:10px;
+    top:75px;
+    z-index:10;
     li {
         margin-left: 8px;
         margin-right: 8px;
@@ -27,7 +27,7 @@ nav{
         text-transform: uppercase;
         margin: 4px;
         padding: 10px;
-        font-size: 21px;
+        font-size: 15px;
         
     }
         
@@ -35,11 +35,34 @@ nav{
 }
 
 .carousel-indicators li {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 100%;
     &.active{
         background-color: $active-orange;
     }
   }
 
+.carousel-caption{
+        
+        text-align: center;
+        padding-top:0px;
+        bottom:80px;
+        max-width: 350px;
+        left:14%;
+        .caption-header-red{
+            font-weight:500 !important;
+            color:$active-orange;
+            text-transform: uppercase;
+        }
+
+        .caption-header-white{
+            font-weight:500 !important;
+            color:white;
+            text-transform: uppercase;
+        }
+
+        .caption-sub-header{
+            color:white;
+        }
+}
