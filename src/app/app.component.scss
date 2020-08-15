@@ -158,6 +158,10 @@ nav{
      height:auto;
      width:50%;
      padding:40px;
+     transition: 0.3s;
+ }
+ .service-images:hover{
+  transform: translate(0, -20px);
  }
  .image-title{
     font-family: "Raleway";
@@ -173,7 +177,9 @@ nav{
      font-size:30px;
      color:#fff;
      text-align: center;
-     margin:10px;
+     margin-left:10px;
+     margin-right:10px;
+     margin-bottom:30px;
      background-color:#D9322A;
      float:left;
  }
