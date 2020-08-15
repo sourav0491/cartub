@@ -154,3 +154,27 @@ nav{
   margin: 0 auto;
   display: block;
  }
+ .service-images{
+     height:auto;
+     width:50%;
+     padding:40px;
+ }
+ .image-title{
+    font-family: "Raleway";
+    font-weight: 900;   
+    font-size: 20px;
+    color:black
+ }
+ .circle{
+     width: 200px;
+     height:200px;
+     line-height: 200px;
+     border-radius: 50%;
+     font-size:30px;
+     color:#fff;
+     text-align: center;
+     margin:10px;
+     background-color:#D9322A;
+     float:left;
+ }
+
