@@ -114,12 +114,12 @@ nav{
     width:100%;
     height:auto
   }
-  .services-section{
+  .services-section,.footer-section{
     background-color: black;
     font-family: "Raleway", Sans-serif;
   }
 
-  .scervices-image-container{
+  .services-image-container{
     padding:60px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -240,3 +240,11 @@ section.gallery-section{
         margin-bottom:70px;
     }
 }
+.footer-para{
+    color:white;
+    font-family: "Roboto", Sans-serif;
+    margin:20px;
+    font-size:15px;
+    text-align:center;
+    line-height:2em
+ }
