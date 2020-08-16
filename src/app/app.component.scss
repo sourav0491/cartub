@@ -1,4 +1,6 @@
 $active-orange:#F44336;
+$title-font:"Raleway-Bold",sans-serif;
+
 
 img{
 &.w-100 {
@@ -10,8 +12,9 @@ img{
 nav{
     position:absolute;
     right:10px;
-    top:75px;
+    top:70px;
     z-index:10;
+    max-height:100px;
     li {
         margin-left: 8px;
         margin-right: 8px;
@@ -67,29 +70,35 @@ nav{
         }
 }
 .services-heading,.testimonial-heading{
-    font-family: "Raleway";
+    font-family: "Raleway-Bold", sans-serif;    
     font-weight: 900;
     text-align: center;
     font-size: 50px;
     color:white
   }
+
+  .services-heading{
+      padding:37px 0;
+  }
   .gallery-heading{
-    font-family: "Raleway";
+    font-family: $title-font;
     font-weight: 900;
     text-align: center;
     font-size: 50px;
-    color:black
+    color:black;
+    margin-top:38px;
   }
   .sub-section-heading{
     color:red;
     font-family: "Raleway", Sans-serif;
     font-weight: bolder;
     text-align: center;
+    padding-top:30px;
   }
   .para{
     color:white;
     font-family: "Roboto", Sans-serif;
-    margin:20px;
+    margin: 20px 20px 0 20px;
     font-size:12px;
     text-align:left;
     line-height:2em
@@ -107,6 +116,14 @@ nav{
   }
   .services-section{
     background-color: black;
+    font-family: "Raleway", Sans-serif;
+  }
+
+  .scervices-image-container{
+    padding:60px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 60px 60px 60px;
   }
   .row{
     margin-left:40px;
@@ -155,19 +172,20 @@ nav{
   display: block;
  }
  .service-images{
-     height:auto;
-     width:50%;
-     padding:40px;
+     height:auto;   
+     width:40%;
+     padding:40px 0;
      transition: 0.3s;
  }
  .service-images:hover{
   transform: translate(0, -20px);
  }
  .image-title{
-    font-family: "Raleway";
-    font-weight: 900;   
+    font-family: "Raleway-Bold",sans-serif;
+    font-weight: 600;   
     font-size: 20px;
-    color:black
+    color:black;
+    text-align: center;
  }
  .circle{
      width: 200px;
@@ -184,3 +202,41 @@ nav{
      float:left;
  }
 
+ .circle-container{
+     justify-content: space-around;
+     margin-bottom:20px;
+ }
+
+.service-type-container{
+    display:flex;
+    justify-content: space-around;
+}
+
+.service-type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:350px;
+}
+
+//style="text-align:center;padding:40px"
+
+.plan-selection{
+    margin: 70px 0 70px 0;
+    .header{
+        font-family: $title-font;
+        font-weight:900;
+        font-size:45px;
+        text-align:center;
+    }
+    .sub-header{
+        text-align:center;
+    }
+}
+
+section.gallery-section{
+    .container{
+        margin-top:50px;
+        margin-bottom:70px;
+    }
+}
