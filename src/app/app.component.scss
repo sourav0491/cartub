@@ -248,3 +248,31 @@ section.gallery-section{
     text-align:center;
     line-height:2em
  }
+
+ #testimonials{
+     margin-bottom: 32px;
+     .caption-sub-header{
+         text-align:left;
+         line-height: 1.6;
+     }
+     .testimonial-name{
+        text-align:left;
+        color:$active-orange;
+        font:$title-font;
+        font-size: 30px;
+        font-weight: 600;
+     }
+     .testimonial-job{
+        text-align:left;
+    }
+
+    .carousel-caption{
+        bottom:25%;
+        left:40%;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 50%
+    }
+ }
