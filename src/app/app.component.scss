@@ -1,5 +1,10 @@
 $active-orange:#F44336;
 $title-font:"Raleway-Bold",sans-serif;
+
+$tablet-width: 769px;
+$desktop-width: 1024px;
+$mobile-width: 453px;
+
 html{
     font-size:62.5%
 }
@@ -185,9 +190,20 @@ nav{
  .image-title{
     font-family: "Raleway-Bold",sans-serif;
     font-weight: 600;   
-    font-size: 1rem;
     color:black;
     text-align: center;
+
+    @media(max-width:$mobile-width){
+        font-size: .6rem;
+    }
+
+    @media(min-width:$mobile-width) and (max-width:$tablet-width){
+        font-size: .8rem;
+    }
+
+    @media(min-width:$tablet-width) and (min-width:$tablet-width){
+        font-size: 1.5rem;
+    }
  }
  .circle{
      width: 200px;
@@ -218,7 +234,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:350px;
+    width:22rem;
 }
 
 //style="text-align:center;padding:40px"
