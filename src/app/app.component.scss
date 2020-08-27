@@ -4,6 +4,8 @@ $title-font:"Raleway-Bold",sans-serif;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 $mobile-width: 453px;
+$heading-font-size:4rem;
+$heading-font-weight:600;
 
 html{
     font-size:62.5%
@@ -78,14 +80,19 @@ nav{
 }
 .services-heading,.testimonial-heading{
     font-family: "Raleway-Bold", sans-serif;    
-    font-weight: 900;
+    font-weight: $heading-font-weight;
     text-align: center;
-    font-size: 50px;
+    font-size: $heading-font-size;
     color:white
   }
 
   .services-heading{
-      padding:37px 0;
+      @media(min-width:$tablet-width){
+        padding:37px 0;
+      }
+      @media(max-width:$tablet-width){
+        padding: 0 15px;
+    }
   }
   .gallery-heading{
     font-family: $title-font;
@@ -100,15 +107,36 @@ nav{
     font-family: "Raleway", Sans-serif;
     font-weight: bolder;
     text-align: center;
-    padding-top:30px;
+
+
+    @media (max-width:$tablet-width){
+        padding-top:15px;
+    }
+
+    @media(min-width:$tablet-width){
+        padding-top:30px;
+    }
   }
   .para{
     color:white;
     font-family: "Roboto", Sans-serif;
-    margin: 20px 20px 0 20px;
     font-size:12px;
     text-align:left;
-    line-height:2em
+    
+
+    @media (max-width:$mobile-width){
+        line-height: 1.2;
+        margin: 10px 0 15px 0;
+    }
+
+     @media(min-width:$mobile-width) and (max-width:$tablet-width){
+        line-height: 1.2;
+    }
+
+    @media(min-width:$tablet-width){
+        line-height: 1.6;
+        margin: 20px 20px 0 20px;
+    }
   }
   .para1{
     font-family: "Raleway";
@@ -117,20 +145,27 @@ nav{
     font-size: 30px;
     color:black
   }
-  .images{
-    width:100%;
-    height:auto
-  }
+//   .images{
+//     width:100%;
+//     height:auto
+//   }
   .services-section,.footer-section{
     background-color: black;
     font-family: "Raleway", Sans-serif;
   }
 
   .services-image-container{
-    padding:60px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 0 60px 60px 60px;
+    @media(max-width:$mobile-width){
+        padding: 0 30px 30px 30px;
+    }
+
+
+    @media(min-width:$tablet-width){
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(5,max-content);
+        padding: 0 60px 60px 60px;
+    }
   }
   .row{
     margin-left:40px;
@@ -303,7 +338,7 @@ section.gallery-section{
         }
 
         @media(min-width:$desktop-width) {
-            font-size: 6rem;
+            font-size: 1.6rem;
         }
 
         font-weight: 600;
