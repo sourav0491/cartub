@@ -270,11 +270,35 @@ nav{
     }
  }
  .circle{
-    width: 250px;
-    height:250px;
-    line-height: 250px;
+    @media (max-width:$mobile-width){
+        width: 200px;
+        height:200px;
+        line-height: 180px;
+        font-size: 12px;
+    }
+
+     @media(min-width:$mobile-width) and (max-width:$tablet-width){
+        width: 220px;
+        height:220px;
+        line-height: 220px;
+        font-size: 13px;
+    }
+
+    @media(min-width:$tablet-width) and (max-width:$desktop-width){
+        width: 220px;
+        height:220px;
+        line-height: 220px;
+        font-size: 13px;
+    }
+
+    @media(min-width:$desktop-width){
+        width: 250px;
+        height:250px;
+        line-height: 250px;
+        font-size: 14px;
+    }
+
     border-radius: 50%;
-    font-size:14px;
     color:#fff;
     text-align: center;
     margin-left:10px;
@@ -426,7 +450,7 @@ section.gallery-section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:22rem;
+    width:auto;
 }
 .summary-title{
     font-family: "Raleway-Bold",sans-serif;
