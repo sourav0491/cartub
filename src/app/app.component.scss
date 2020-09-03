@@ -146,6 +146,7 @@ nav{
     font-family: "Roboto", Sans-serif;
     font-size:12px;
     text-align:left;
+    padding-bottom: 1rem;
     
 
     @media (max-width:$mobile-width){
@@ -187,8 +188,11 @@ nav{
 
     @media(min-width:$tablet-width){
         grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(5,max-content);
         padding: 0 60px 60px 60px;
+        .img-fluid{
+            min-width: 100%;
+            min-height:100%;
+        }
     }
   }
   .row{
@@ -324,7 +328,8 @@ section.gallery-section{
     margin:20px;
     font-size:15px;
     text-align:center;
-    line-height:2em
+    line-height:2em;
+
  }
 
  #testimonials{
