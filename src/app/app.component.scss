@@ -273,22 +273,22 @@ nav{
     @media (max-width:$mobile-width){
         width: 200px;
         height:200px;
-        line-height: 180px;
-        font-size: 11px;
+        line-height: 200px;
+        font-size: 10px;
     }
 
      @media(min-width:$mobile-width) and (max-width:$tablet-width){
         width: 220px;
         height:220px;
         line-height: 220px;
-        font-size: 13px;
+        font-size: 11px;
     }
 
     @media(min-width:$tablet-width) and (max-width:$desktop-width){
         width: 220px;
         height:220px;
         line-height: 220px;
-        font-size: 13px;
+        font-size: 11px;
     }
 
     @media(min-width:$desktop-width){
