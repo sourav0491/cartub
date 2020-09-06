@@ -436,6 +436,8 @@ section.gallery-section{
 .end-footer{
     color:white;
     font-family: "Roboto", Sans-serif;
+    text-align: center;
+    background-color: black;    
 }
 .summary-container{
     display:flex;
@@ -469,4 +471,8 @@ section.gallery-section{
     @media(min-width:$desktop-width){
         font-size: 1rem;
     }
+ }
+ .footer-images{
+     padding-left:10px;
+     padding-right:10px;
  }
