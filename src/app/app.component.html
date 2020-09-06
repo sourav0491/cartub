@@ -312,12 +312,9 @@
     </div>
     <div class="col-sm-6">
       <p class="para1">Bring back your car gleaming like new!</p>
-      <button class="btn btn-danger book-now-button" onclick="location.href='#contact-us-form'">Book Now</button>
+      <button class="btn btn-danger book-now-button" (click)="show()">Book Now</button>
     </div>
   </div>
-</section>
-<section id="contact-us-form">
-  <div></div>
 </section>
 <section class="footer-section">
   <footer>
@@ -400,3 +397,56 @@
 <a  class="whats-app" href="https://api.whatsapp.com/send?phone=919874786866" target="_blank">
   <i class="fa fa-whatsapp my-float"></i>
 </a>
+<!-- Creates the bootstrap modal where the image will appear -->
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header" style="background-color: black;">
+      <h4 class="modal-title" id="myModalLabel" style="color:white">Contact Us</h4>
+    </div>
+    <div class="modal-body">
+              <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                       <div class="col-sm-8">
+                          <div class="form-group">
+                                <label class="modal-label">Name</label>
+                                <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                      <div *ngIf="f.name.errors.required">Name is required</div>
+                                </div>
+                             </div>
+                       </div> 
+                       <div class="col-sm-8">
+                          <div class="form-group">
+                             <label class="modal-label">Email</label>
+                             <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                             <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="col-sm-8">
+                             <div class="form-group">
+                                <label class="modal-label">Message</label>
+                                <textarea formControlName="message" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+                                <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                                  <div *ngIf="f.message.errors.required">Message is required</div>
+                                </div>
+                             </div>
+                          </div>
+           </div>
+           <div class="col-sm-8" style="text-align:center;padding:10px">
+            <button type="submit" class="btn btn-info">Submit</button>
+           </div>
+
+          </form>
+   
+  
+</div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide()">Close</button>    
+    </div>
+  </div>
+</div>
+</div>
