@@ -18,8 +18,29 @@ img{
   }
 }
 
+@mixin title-text{
+    font-family:$title-font;
+    font-weight: 900;
+    font-size:3rem;
+}
 
+@mixin sub-heading-text{
+    font-family: "Raleway-Bold",sans-serif;
+    font-weight: 600;
+    font-size:1rem;
+}
 
+@mixin sub-heading-text-large{
+    font-family: "Raleway";
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+@mixin content-text{
+    font-family: "Roboto", Sans-serif;
+    font-size:12px;
+    font-size:.8rem;
+}
 nav{
     @media(min-width:$tablet-width){
     right:10px;
@@ -103,10 +124,8 @@ nav{
         }
 }
 .services-heading,.testimonial-heading{
-    font-family: "Raleway-Bold", sans-serif;    
-    font-weight: $heading-font-weight;
+    @include title-text;
     text-align: center;
-    font-size: $heading-font-size;
     color:white
   }
 
@@ -119,17 +138,14 @@ nav{
     }
   }
   .gallery-heading{
-    font-family: $title-font;
-    font-weight: 900;
+    @include title-text;
     text-align: center;
-    font-size: 50px;
     color:black;
     margin-top:38px;
   }
   .sub-section-heading{
+    @include title-text;
     color:#d9322a;
-    font-family: "Raleway", Sans-serif;
-    font-weight: bolder;
     text-align: center;
 
 
@@ -142,11 +158,10 @@ nav{
     }
   }
   .para{
+    @include content-text;
     color:white;
-    font-family: "Roboto", Sans-serif;
-    font-size:12px;
     text-align:left;
-    padding-bottom: 1rem;
+    padding: 1rem;
     
 
     @media (max-width:$mobile-width){
@@ -164,8 +179,7 @@ nav{
     }
   }
   .para1{
-    font-family: "Raleway";
-    font-weight: 900;
+    @include sub-heading-text-large;
     text-align: center;
     font-size: 30px;
     color:black
@@ -252,11 +266,9 @@ nav{
   transform: translate(0, -20px);
  }
  .image-title{
-    font-family: "Raleway-Bold",sans-serif;
-    font-weight: 600;   
+   @include sub-heading-text;
     color:black;
     text-align: center;
-
     @media(max-width:$mobile-width){
         font-size: .6rem;
     }
@@ -270,32 +282,30 @@ nav{
     }
  }
  .circle{
+     @include content-text;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     word-wrap: break-word;
+     padding:1rem;
     @media (max-width:$mobile-width){
         width: 200px;
         height:200px;
-        line-height: 200px;
-        font-size: 10px;
     }
 
      @media(min-width:$mobile-width) and (max-width:$tablet-width){
         width: 220px;
         height:220px;
-        line-height: 220px;
-        font-size: 11px;
     }
 
     @media(min-width:$tablet-width) and (max-width:$desktop-width){
         width: 220px;
         height:220px;
-        line-height: 220px;
-        font-size: 11px;
     }
 
     @media(min-width:$desktop-width){
         width: 250px;
         height:250px;
-        line-height: 250px;
-        font-size: 14px;
     }
 
     border-radius: 50%;
@@ -330,12 +340,11 @@ nav{
 .plan-selection{
     margin: 70px 0 70px 0;
     .header{
-        font-family: $title-font;
-        font-weight:900;
-        font-size:45px;
+        @include title-text;
         text-align:center;
     }
     .sub-header{
+        @include content-text;
         text-align:center;
     }
 }
@@ -346,28 +355,29 @@ section.gallery-section{
         margin-bottom:70px;
     }
 }
+footer{
+    padding:1rem;
 .footer-para{
+    @include content-text;
     color:white;
-    font-family: "Roboto", Sans-serif;
     margin:20px;
-    font-size:15px;
     text-align:center;
-    line-height:2em;
+    line-height:1.5em;
 
  }
+}
 
  #testimonials{
      margin-bottom: 32px;
      .caption-sub-header{
          text-align:left;
+         @include content-text;
          @media (max-width:$mobile-width){
             line-height: 1.2;
-            font-size:0.8rem
         }
 
          @media(min-width:$mobile-width) and (max-width:$tablet-width){
             line-height: 1.4;
-            font-size:1rem
         }
     
         @media(min-width:$tablet-width) and (max-width:$desktop-width){
@@ -381,8 +391,7 @@ section.gallery-section{
      .testimonial-name{
         text-align:left;
         color:$active-orange;
-        font:$title-font;
-        
+        @include sub-heading-text;
         @media(min-width:$mobile-width) and (max-width:$tablet-width){
             font-size: 1rem;
         }
@@ -394,10 +403,9 @@ section.gallery-section{
         @media(min-width:$desktop-width) {
             font-size: 1.6rem;
         }
-
-        font-weight: 600;
      }
      .testimonial-job{
+        @include sub-heading-text;
         text-align:left;
     }
 
@@ -434,8 +442,8 @@ section.gallery-section{
     margin-top: 10px;
 }
 .end-footer{
+    @include content-text;
     color:white;
-    font-family: "Roboto", Sans-serif;
     text-align: center;
     background-color: black;    
 }
@@ -455,22 +463,27 @@ section.gallery-section{
     width:auto;
 }
 .summary-title{
-    font-family: "Raleway-Bold",sans-serif;
-    font-weight: 600;   
+   @include sub-heading-text;
     color:black;
     text-align: center;
+ 
+    // @media(max-width:$mobile-width){
+    //     font-size: .8rem;
+    // }
 
-    @media(max-width:$mobile-width){
-        font-size: .8rem;
-    }
+    // @media(min-width:$mobile-width) and (max-width:$tablet-width){
+    //     font-size: .8rem;
+    // }
 
-    @media(min-width:$mobile-width) and (max-width:$tablet-width){
-        font-size: .8rem;
-    }
+    // @media(min-width:$desktop-width){
+    //     font-size: 1rem;
+    // }
+ }
 
-    @media(min-width:$desktop-width){
-        font-size: 1rem;
-    }
+ .summary-item{
+     li{
+        @include content-text;
+     }
  }
  .footer-images{
      padding-left:10px;
@@ -481,4 +494,12 @@ section.gallery-section{
     font-weight: 600;   
     color:black;
     text-align: center;
+ }
+
+ .contact-us-section{
+    padding:1rem;
+ }
+
+ .summary-section{
+     padding:1rem;
  }
