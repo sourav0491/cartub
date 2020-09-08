@@ -29,6 +29,7 @@ export class AppComponent {
         email: ['', [Validators.required, Validators.email]],
         name: ['', [Validators.required, Validators.minLength(6)]],
         message:['', [Validators.required, Validators.minLength(3)]],
+        mobile:['',[Validators.required,Validators.pattern(/^[6-9]\d{9}$/)]]
     });
 }
 // convenience getter for easy access to form fields

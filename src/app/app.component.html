@@ -282,7 +282,7 @@
             </p>
 
             <div class="testimonial-name">Radhika Dhanuka</div>
-            <div class="testimonial-job">Ceo &amp; Founder - Rd Creativity</div>
+            <div class="testimonial-job">CEO &amp; Founder - Rd Creativity</div>
 
           </div>
         </div>
@@ -429,6 +429,17 @@
                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                   <div *ngIf="f.email.errors.required">Email is required</div>
                   <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label class="modal-label">Mobile Number</label>
+                <input type="text" formControlName="mobile" class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                  <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+                  <div *ngIf="f.mobile.errors.mobile">Mobile must be valid</div>
                 </div>
               </div>
             </div>
