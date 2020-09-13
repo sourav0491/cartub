@@ -20,7 +20,7 @@ img{
 
 @mixin title-text{
     font-family:$title-font;
-    font-weight: 900;
+    font-weight: 700;
     font-size:3rem;
 }
 
@@ -36,10 +36,24 @@ img{
     font-size: 1.2rem;
 }
 
+@mixin sub-heading-text-small{
+    font-family: "Raleway";
+    font-size: 0.8rem;
+    text-align: left;
+}
 @mixin content-text{
     font-family: "Roboto", Sans-serif;
-    font-size:12px;
     font-size:.8rem;
+}
+@mixin content-text-small{
+    font-family: "Roboto", Sans-serif;
+    font-size:.6rem;
+}
+#home{
+    .carousel-inner img {
+        width: 100%;
+        height: 35vh;
+    }
 }
 nav{
     @media(min-width:$tablet-width){
@@ -219,11 +233,6 @@ nav{
     margin-bottom: 100px
 }
 
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-}
-
 #custCarousel .carousel-indicators {
     position: static;
     margin-top: 20px
@@ -370,21 +379,26 @@ footer{
      margin-bottom: 32px;
      .caption-sub-header{
          text-align:left;
-         @include content-text;
+       
          @media (max-width:$mobile-width){
             line-height: 1.2;
+            @include content-text-small;
         }
 
          @media(min-width:$mobile-width) and (max-width:$tablet-width){
             line-height: 1.4;
+            @include content-text-small;
+
         }
     
         @media(min-width:$tablet-width) and (max-width:$desktop-width){
             line-height: 1.2;
+            @include sub-heading-text-large;
         }
 
         @media(min-width:$desktop-width){
             line-height: 1.6;
+            @include sub-heading-text-large;
         }
      }
      .testimonial-name{
@@ -404,7 +418,7 @@ footer{
         }
      }
      .testimonial-job{
-        @include sub-heading-text;
+        @include sub-heading-text-small;
         text-align:left;
     }
 
@@ -460,6 +474,14 @@ footer{
     flex-direction: column;
     align-items: center;
     width:auto;
+    ul{
+        padding:0;
+    }
+    li{
+       @include content-text;
+       margin:0;
+       padding:0;
+    }
 }
 .summary-title{
    @include sub-heading-text;
@@ -479,11 +501,6 @@ footer{
     // }
  }
 
- .summary-item{
-     li{
-        @include content-text;
-     }
- }
  .footer-images{
      padding-left:10px;
      padding-right:10px;
